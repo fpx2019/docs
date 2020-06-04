@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.使用chrome performance 查看页面性能 | Lnotes</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/icon.png">
+    <meta name="description" content="记 录">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.be73bc38.css" as="style"><link rel="preload" href="/docs/assets/js/app.94f29f89.js" as="script"><link rel="preload" href="/docs/assets/js/2.8dcc4318.js" as="script"><link rel="preload" href="/docs/assets/js/14.729967d5.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.b1e3e765.js"><link rel="prefetch" href="/docs/assets/js/11.bd8ab038.js"><link rel="prefetch" href="/docs/assets/js/12.c642ac33.js"><link rel="prefetch" href="/docs/assets/js/13.9e1471c3.js"><link rel="prefetch" href="/docs/assets/js/15.43d44697.js"><link rel="prefetch" href="/docs/assets/js/16.ed04e788.js"><link rel="prefetch" href="/docs/assets/js/17.95defc51.js"><link rel="prefetch" href="/docs/assets/js/18.83eaa4f2.js"><link rel="prefetch" href="/docs/assets/js/19.57e19e54.js"><link rel="prefetch" href="/docs/assets/js/20.a145bb62.js"><link rel="prefetch" href="/docs/assets/js/21.54f6c464.js"><link rel="prefetch" href="/docs/assets/js/22.fc3570f9.js"><link rel="prefetch" href="/docs/assets/js/23.d1be5cbf.js"><link rel="prefetch" href="/docs/assets/js/24.8f5bf24d.js"><link rel="prefetch" href="/docs/assets/js/25.be876e03.js"><link rel="prefetch" href="/docs/assets/js/26.7c2238d8.js"><link rel="prefetch" href="/docs/assets/js/27.731ac02d.js"><link rel="prefetch" href="/docs/assets/js/28.9c6cc7c8.js"><link rel="prefetch" href="/docs/assets/js/29.e2aa3be0.js"><link rel="prefetch" href="/docs/assets/js/3.6db7668c.js"><link rel="prefetch" href="/docs/assets/js/30.fd67d98d.js"><link rel="prefetch" href="/docs/assets/js/31.4fcbbc48.js"><link rel="prefetch" href="/docs/assets/js/32.09dd5323.js"><link rel="prefetch" href="/docs/assets/js/33.69d1e96d.js"><link rel="prefetch" href="/docs/assets/js/34.8bd54bb4.js"><link rel="prefetch" href="/docs/assets/js/4.68babebb.js"><link rel="prefetch" href="/docs/assets/js/5.f67f6971.js"><link rel="prefetch" href="/docs/assets/js/6.ba23c9a3.js"><link rel="prefetch" href="/docs/assets/js/7.164e29bf.js"><link rel="prefetch" href="/docs/assets/js/8.5ee08960.js"><link rel="prefetch" href="/docs/assets/js/9.9afd892a.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.be73bc38.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Lnotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://gitee.com/i_hope_its_you" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  主 页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记 录" class="dropdown-title"><span class="title">记 录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/blog/" class="nav-link router-link-active">
+  文 章
+</a></li><li class="dropdown-item"><!----> <a href="/docs/notes/" class="nav-link">
+  参 考
+</a></li><li class="dropdown-item"><!----> <a href="/docs/standard/" class="nav-link">
+  规 范
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学 习" class="dropdown-title"><span class="title">学 习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/learn/" class="nav-link">
+  资 料
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tool/" class="nav-link">
+  工 具
+</a></li><li class="dropdown-item"><!----> <a href="/docs/note/" class="nav-link">
+  知 识
+</a></li><li class="dropdown-item"><!----> <a href="/docs/life/" class="nav-link">
+  生 活
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/book/list.html" class="nav-link">
+  阅 读
+</a></div><div class="nav-item"><a href="/docs/course/list.html" class="nav-link">
+  教 程
+</a></div><div class="nav-item"><a href="https://github.com/fpx2019/docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://gitee.com/i_hope_its_you" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  主 页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="记 录" class="dropdown-title"><span class="title">记 录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/blog/" class="nav-link router-link-active">
+  文 章
+</a></li><li class="dropdown-item"><!----> <a href="/docs/notes/" class="nav-link">
+  参 考
+</a></li><li class="dropdown-item"><!----> <a href="/docs/standard/" class="nav-link">
+  规 范
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学 习" class="dropdown-title"><span class="title">学 习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/learn/" class="nav-link">
+  资 料
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tool/" class="nav-link">
+  工 具
+</a></li><li class="dropdown-item"><!----> <a href="/docs/note/" class="nav-link">
+  知 识
+</a></li><li class="dropdown-item"><!----> <a href="/docs/life/" class="nav-link">
+  生 活
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/book/list.html" class="nav-link">
+  阅 读
+</a></div><div class="nav-item"><a href="/docs/course/list.html" class="nav-link">
+  教 程
+</a></div><div class="nav-item"><a href="https://github.com/fpx2019/docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>📄 文 章</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/blog/" aria-current="page" class="sidebar-link">1. var、let和const区别</a></li><li><a href="/docs/blog/2.html" aria-current="page" class="active sidebar-link">2.使用chrome performance 查看页面性能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/blog/2.html#_1-前言" class="sidebar-link">1 前言</a></li><li class="sidebar-sub-header"><a href="/docs/blog/2.html#_2-概览" class="sidebar-link">2 概览</a></li><li class="sidebar-sub-header"><a href="/docs/blog/2.html#_3-使用方法" class="sidebar-link">3 使用方法</a></li><li class="sidebar-sub-header"><a href="/docs/blog/2.html#_4-分析每一秒帧" class="sidebar-link">4 分析每一秒帧</a></li><li class="sidebar-sub-header"><a href="/docs/blog/2.html#_5-定位瓶颈" class="sidebar-link">5 定位瓶颈</a></li></ul></li><li><a href="/docs/blog/3.html" class="sidebar-link">3. Vue+Element前端导入导出Excel</a></li><li><a href="/docs/blog/4.html" class="sidebar-link">4. Vue监听键盘鼠标事件</a></li><li><a href="/docs/blog/5.html" class="sidebar-link">5. Vue使用Canvas绘制图片、矩形、线条、文字，下载图片</a></li><li><a href="/docs/blog/6.html" class="sidebar-link">6. vue全家桶+Echarts+百度地图，搭建数据可视化系统</a></li><li><a href="/docs/blog/7.html" class="sidebar-link">7. Vue项目打包后动态获取自定义变量</a></li><li><a href="/docs/blog/8.html" class="sidebar-link">8. 前端引用字体@font-face的若干优化方法</a></li><li><a href="/docs/blog/9.html" class="sidebar-link">9. vue全家桶+Echarts+百度地图，搭建数据可视化系统（【续】接口篇）</a></li><li><a href="/docs/blog/10.html" class="sidebar-link">10. Vue项目引入CreateJS的方法（亲测）</a></li><li><a href="/docs/blog/11.html" class="sidebar-link">11. Element-ui 简单实现表格滚动（附演示及源码）</a></li><li><a href="/docs/blog/12.html" class="sidebar-link">12. Canvas图片处理之黑白、反向（附演示及源码）</a></li><li><a href="/docs/blog/13.html" class="sidebar-link">13. Npm 发布 Vue 组件教程</a></li><li><a href="/docs/blog/14.html" class="sidebar-link">14. tabindex 用法说明</a></li><li><a href="/docs/blog/15.html" class="sidebar-link">15. Pug 介绍和在 Vue 中使用</a></li><li><a href="/docs/blog/16.html" class="sidebar-link">16. 我是如何在 GitHub 上提交 PR 的</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2-使用chrome-performance-查看页面性能"><a href="#_2-使用chrome-performance-查看页面性能" class="header-anchor">#</a> 2.使用chrome performance 查看页面性能</h1> <h2 id="_1-前言"><a href="#_1-前言" class="header-anchor">#</a> 1 前言</h2> <p>随着深入开发，你会越来越发现前端工程中性能的重要性。不管使用什么技术栈，性能优化都是绕不过去的问题。</p> <p>优化性能之前，首先要知道如何查看网页性能。</p> <p>chrome 浏览器提供的performance就是一个最常用的工具。</p> <p>按 Ctrl+shift+I<code>打开开发者工具就可以找到</code>performance<code>(旧版本也叫</code>Timeline`)</p> <hr> <h2 id="_2-概览"><a href="#_2-概览" class="header-anchor">#</a> 2 概览</h2> <p><img src="https://s1.ax1x.com/2020/05/24/YxOqpD.png" alt="YxOqpD.png"></p> <hr> <h2 id="_3-使用方法"><a href="#_3-使用方法" class="header-anchor">#</a> 3 使用方法</h2> <ul><li><p>点击面板左上方圆形按钮开始记录，然后操作页面，一段时间之后在面板上点击停止，即可得到这段操作过程的记录结果。</p></li> <li><p>点击面板上左上方刷新按键，可以重新加载页面并获得该过程记录结果。</p></li> <li><p>点击面板左上方禁止符号，可以清除记录结果。</p> <p><strong>缩略图版块</strong></p> <p><img src="https://s1.ax1x.com/2020/05/24/YxXuNV.png" alt="YxXuNV.png"></p> <p>缩略图中一共分为5行，从上到下依次是：</p> <ol><li>FPS，表示每一秒的帧数，用来衡量页面动画的性能指标。fps图中绿色柱状越高表示体验越好。若出现红色长条则表示在该时间端出现长帧，可能影响用户体验。</li> <li>CPU，表示cpu的使用情况，其中颜色含义和底下的<code>Summary</code>模块中相同。从该行中颜色块的跨越时长可以分析哪类事件消耗的时间较长，从而找到性能瓶颈。</li> <li>NET，每一个颜色条表示加载一种文件。蓝色表示html文件、黄色表示js文件、紫色表示样式文件、绿色表示媒体文件、灰色表示其他资源。</li> <li>缩略图，对应每一时刻页面的显示情况。通过勾选上方 <code>Screenshots</code> 来控制显示或隐藏。</li> <li>HEAP，表示堆内存使用情况。可通过勾选上访 <code>Menory</code> 来控制显示或隐藏。</li></ol></li></ul> <hr> <h2 id="_4-分析每一秒帧"><a href="#_4-分析每一秒帧" class="header-anchor">#</a> 4 分析每一秒帧</h2> <p>1.观察FPS图表，如果你发现了一个红色的长条，那么就说明这些帧存在严重问题，有可能导致非常差的用户体验。一般来说，绿色的长条越高，说明FPS越高，用户体验越好。</p> <p><img src="https://s1.ax1x.com/2020/05/24/YxXyDA.jpg" alt="YxXyDA.jpg"></p> <p>2.在FPS图表下方，你会看到CPU图表。在CPU图表中的各种颜色与Summary面板里的颜色是相互对应的，Summary面板就在Performance面板的下方。CPU图表中的各种颜色代表着在这个时间段内，CPU在各种处理上所花费的时间。如果你看到了某个处理占用了大量的时间，那么这可能就是一个可以找到性能瓶颈的线索。</p> <p><img src="https://s1.ax1x.com/2020/05/24/Yxj0I0.jpg" alt="Yxj0I0.jpg"></p> <hr> <h2 id="_5-定位瓶颈"><a href="#_5-定位瓶颈" class="header-anchor">#</a> 5 定位瓶颈</h2> <p>1.观察Summary面板，你会发现CPU花费了大量的时间在rendering上。因为提高性能就是一门做减法的艺术，你的目标就是减少rendering的时间</p> <p><a href="https://imgchr.com/i/YxXgEt" target="_blank" rel="noopener noreferrer"><img src="https://s1.ax1x.com/2020/05/24/YxXgEt.png" alt="YxXgEt.png"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>2.在性能报告中，有很多的数据。可以通过双击，拖动等等动作来放大缩小报告范围，从各种时间段来观察分析报告</p> <p>在事件长条的右上角出，如果出现了红色小三角，说明这个事件是存在问题的，需要特别注意。</p> <p><img src="https://s1.ax1x.com/2020/05/24/YxXqU0.jpg" alt="YxXqU0.jpg"></p> <p>在summary面板app.update这个事件的蓝色app.js:94就会跳转到需要优化的代码处。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/blog/" class="prev router-link-active">
+        1. var、let和const区别
+      </a></span> <span class="next"><a href="/docs/blog/3.html">
+        3. Vue+Element前端导入导出Excel
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.94f29f89.js" defer></script><script src="/docs/assets/js/2.8dcc4318.js" defer></script><script src="/docs/assets/js/14.729967d5.js" defer></script>
+  </body>
+</html>
